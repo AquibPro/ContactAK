@@ -39,7 +39,6 @@ mailTransporter.sendMail(mailDetails, function(err, data) {
 });
   }else{res.render('/')}
 });
-});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
