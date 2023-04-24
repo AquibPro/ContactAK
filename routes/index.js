@@ -33,7 +33,8 @@ new Promise((resolve, reject) => {
 mailTransporter.sendMail(mailDetails, function(err, data) {
 	if(err) {
 		console.log('Error Occurred !');
-	} else {
+	} 
+  else {
 		console.log('Submitted successfully !');
 	}
 });
