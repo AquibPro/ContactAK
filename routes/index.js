@@ -37,7 +37,10 @@ mailTransporter.sendMail(mailDetails, function(err, data) {
 		console.log('Submitted successfully !');
 	}
 });
-  }else{res.render('/')}
+});
+  }else{
+    res.render('/')
+  }
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
