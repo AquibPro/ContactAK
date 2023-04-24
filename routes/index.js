@@ -29,6 +29,7 @@ let mailDetails = {
 	html: `<h3>His message - </h3><b><pre>${req.body.message}</pre></b>`
 };
 
+new Promise((resolve, reject) => {
 mailTransporter.sendMail(mailDetails, function(err, data) {
 	if(err) {
 		console.log('Error Occurred !');
@@ -37,6 +38,7 @@ mailTransporter.sendMail(mailDetails, function(err, data) {
 	}
 });
   }else{res.render('/')}
+});
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
