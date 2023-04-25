@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 router.post('/submit', function(req, res, next) {
   res.render('submit');
 
-  if(!req.body.username == "" || undefined || null && !req.body.message == "" || undefined || null) {
+  if(!req.body.username == "" || undefined || null && !req.body.message == "" || undefined || null && !req.body.email == "" || undefined || null) {
 
 let mailTransporter = nodemailer.createTransport({
 	service: 'gmail',
@@ -26,7 +26,7 @@ let mailDetails = {
 	from: 'alpha7x24@gmail.com',
 	to: 'masteraquibkhan@gmail.com',
 	subject: `${req.body.username}, wants to contact you !`,
-	html: `<h3>Message - </h3><b><pre>${req.body.message}</pre></b>`
+	html: `<h3>Email - ${req.body.email}</h3><h3>Message - </h3><b><pre>${req.body.message}</pre></b>`
 };
 
 new Promise((resolve, reject) => {
