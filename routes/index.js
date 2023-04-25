@@ -26,7 +26,7 @@ let mailDetails = {
 	from: 'alpha7x24@gmail.com',
 	to: 'masteraquibkhan@gmail.com',
 	subject: `${req.body.username}, wants to contact you !`,
-	html: `<h3>His message - </h3><b><pre>${req.body.message}</pre></b>`
+	html: `<h3>Message - </h3><b><pre>${req.body.message}</pre></b>`
 };
 
 new Promise((resolve, reject) => {
